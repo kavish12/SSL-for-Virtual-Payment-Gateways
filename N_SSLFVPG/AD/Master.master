@@ -1,0 +1,204 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="AD_Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Master</title>
+      <script language="javascript" type="text/javascript">
+
+        function noCopyNet()
+        {
+                if(document.all)
+                    {
+                        document.onselectstart=function ()
+                            {
+                                 return false
+                            }
+                        document.ondragstart=function ()
+                            {
+                                return false
+                            }
+                        setTimeout("noCopyNet", 3000);
+                    }
+        }
+                noCopyNet();
+
+       function noCopyIE()
+        {
+                if(document.layers||window.sidebar)
+                    {
+                        var str= document.getSelection();
+                            if(str !="")
+                                {
+                                    if(!window.find)
+                                        {
+                                            alert("Function Disabled.");
+                                            location="about:blank";
+                                        }
+                                    else
+                                        {
+                                            if(str !=" "){window.find(" ")}
+                                        }
+                                }
+                            setTimeout("noCopyIE()",20)
+                    }
+        }
+                noCopyIE();
+
+
+//-----------------------------------------------------------------------
+            var myMessage='Sorry... function not allowed';
+
+            function makeFalse()
+            {
+                alert(myMessage);
+                return false
+            }
+
+            function mouseNum(e)
+            {
+                if(e.which==2||e.which==3)
+                return false
+            }
+
+            if(document.layers)
+            {
+                document.captureEvents(Event.MOUSEDOWN);
+                document.onmousedown=mouseNum
+            }
+                document.oncontextmenu=makeFalse;
+</script>
+     <link rel="shortcut icon" href="../icn.ico"/>
+    <link href="../AD/templatemo_style.css" rel="stylesheet" type="text/css" />
+      <link type="text/css" href="../AD/menu.css" rel="stylesheet" />
+    <script type="text/javascript" src="../AD/jquery.js"></script>
+    <script type="text/javascript" src="../AD/menu.js"></script>
+<style type="text/css" >div#copyright { display: none; }</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+     
+<div id="templatemo_header_wrapper">
+	<div id="templatemo_header">
+    	
+        <div id="site_title">
+            <a href="#">Security Socket Layer For Virtual Payment Gateway<span>	server for secured virtual payments & data transmission</span></a>
+        </div> <!-- end of site_title -->
+        <div class="cleaner"></div>
+        
+	</div> <!-- end of templatemo_header -->
+</div> <!-- end of templatemo_header_wrapper -->
+
+<div id="templatemo_banner_wrapper">
+	<div id="templatemo_flash_area">	
+	<table><tr><td valign="top" align="center"><img src="images/head3.gif" />
+ </td></tr></table>
+        <div class="cleaner"></div>
+         <div id="menu">
+    <ul class="menu">
+        <li><a href="Home.aspx" class="parent"><span>Home</span></a>
+           </li>
+                      <li><a href="#" class="parent"><span>Main</span></a>
+						<div><ul>
+							<li><a href="#" class="parent"><span>Register</span></a>
+								<div><ul>
+					     <li><a href="AddN.aspx"><span>News</span></a></li>
+                        <li><a href="AddE.aspx"><span>Events</span></a></li>  
+                      		</ul></div>
+							</li>
+							<li><a href="#" class="parent"><span>Manage</span></a>
+								<div><ul>
+								<li><a href="MngNE.aspx"><span>News/Event</span></a></li>
+                       
+								  </ul></div>
+							</li>
+								<li><a href="#" class="parent"><span>Authenticate</span></a>
+								<div><ul>
+								<li><a href="MngCI.aspx"><span>Client</span></a></li>
+                                 </ul></div>
+							</li>
+						
+							<li><a href="#" class="parent"><span>View</span></a>
+								<div><ul> 
+							
+								<li> <a href="ViewBp.aspx"><span>Bid Accept/Reject Project </span></a></li>
+
+						 <li> <a href="ViewAddR.aspx"><span>Client's Account </span></a></li>
+ <li> <a href="ViewAddRt.aspx"><span>Client's Account_Details </span></a></li>
+
+                                      <li><a href="ViewIP.aspx"><span>IP Address</span></a></li>
+								      <li><a href="ViewCnt.aspx"><span>Contact</span></a></li>
+								</ul></div>
+							</li>
+						
+						</ul></div>
+					</li>
+                                                                        
+       <li><a href="#"><span>Communication</span></a>
+                    <div><ul>
+                        <li><a href="Inbox.aspx"><span>Inbox</span></a></li>
+                           <li><a href="Compose.aspx"><span>Compose</span></a></li>
+                              <li><a href="Sent.aspx"><span>Sent</span></a></li>
+                                 <li><a href="Chat.aspx"><span>Chat</span></a></li>
+                    </ul></div>
+   </li>
+
+    	 <li><a href="#"><span>Report</span></a>
+     <div><ul> <li><a href="Default1.aspx"><span>Client By Id</span></a></li>
+       <li><a href="Default2.aspx"><span>All Client</span></a></li>
+       <li><a href="Default3.aspx"><span>Bid Accept Project</span></a></li>
+       <li><a href="Default4.aspx"><span>Bid Reject Project</span></a></li>
+       <li><a href="Default5.aspx"><span>Client IP-Address</span></a></li>
+        <li><a href="Default6.aspx"><span>Project Details</span></a></li>
+        <li><a href="Default7.aspx"><span>Account Details</span></a></li>
+        <li><a href="Default8.aspx"><span>Transactions</span></a></li>
+        <li><a href="Default9.aspx"><span>Refunds</span></a></li>
+       </ul></div>
+     </li>
+      <li><a href="#"><span>Setting</span></a>
+                    <div><ul>
+                        <li><a href="Img.aspx"><span>Setting</span></a></li>
+                         
+                    </ul></div>
+   </li>
+        <li><a href="Signout.aspx"><span>SignOut</span></a></li>
+         <li><asp:Image ID="Image2" runat="server" ImageUrl="~/AD/images/on.png"/></li>               
+              
+        <li class="last"> <asp:Label ID="Label111" runat="server"></asp:Label></li>
+     </ul>
+</div>
+
+<div id="copyright">Copyright &copy; 2011 <a href="http://apycom.com/">Apycom jQuery Menus</a></div>
+
+	</div>
+</div> <!-- end of banner_wrapper -->
+  
+<div id="templatemo_content_wrapper">
+	<div id="templatemo_content">
+   
+    		 <div>
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </div>
+    
+    		
+            <div class="cleaner"></div>
+    </div> <!-- end of content -->
+</div> <!-- end of content -->
+
+<div id="templatemo_footer_wrapper">
+	<div id="templatemo_footer">
+    
+        Copyright © 2011 <a href="#">Security Socket Layer For Virtual Payment Gateway</a> - 
+        <a href="#" target="_parent">All Rights Reserved</a>
+    
+    </div>
+</div>
+   
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterMain.master.cs" Inherits="AD_MasterMain" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>MasterMain</title>
+     <link rel="shortcut icon" href="../icn.ico"/>
+    <script language="javascript" type="text/javascript">
+
+        function noCopyNet()
+        {
+                if(document.all)
+                    {
+                        document.onselectstart=function ()
+                            {
+                                 return false
+                            }
+                        document.ondragstart=function ()
+                            {
+                                return false
+                            }
+                        setTimeout("noCopyNet", 3000);
+                    }
+        }
+                noCopyNet();
+
+       function noCopyIE()
+        {
+                if(document.layers||window.sidebar)
+                    {
+                        var str= document.getSelection();
+                            if(str !="")
+                                {
+                                    if(!window.find)
+                                        {
+                                            alert("Function Disabled.");
+                                            location="about:blank";
+                                        }
+                                    else
+                                        {
+                                            if(str !=" "){window.find(" ")}
+                                        }
+                                }
+                            setTimeout("noCopyIE()",20)
+                    }
+        }
+                noCopyIE();
+
+
+//-----------------------------------------------------------------------
+            var myMessage='Sorry... function not allowed';
+
+            function makeFalse()
+            {
+                alert(myMessage);
+                return false
+            }
+
+            function mouseNum(e)
+            {
+                if(e.which==2||e.which==3)
+                return false
+            }
+
+            if(document.layers)
+            {
+                document.captureEvents(Event.MOUSEDOWN);
+                document.onmousedown=mouseNum
+            }
+                document.oncontextmenu=makeFalse;
+</script>
+
+  <link href="../AD/templatemo_style.css" rel="stylesheet" type="text/css" />
+      <link type="text/css" href="../AD/menu.css" rel="stylesheet" />
+    <script type="text/javascript" src="../AD/jquery.js"></script>
+    <script type="text/javascript" src="../AD/menu.js"></script>
+<style type="text/css" >div#copyright { display: none; }</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+    
+<div id="templatemo_header_wrapper">
+	<div id="templatemo_header">
+    	
+        <div id="site_title">
+            <a href="#">Security Socket Layer For Virtual Payment Gateway<span>	server for secured virtual payments & data transmission</span></a>
+        </div> <!-- end of site_title -->
+        <div class="cleaner"></div>
+        
+	</div> <!-- end of templatemo_header -->
+</div> <!-- end of templatemo_header_wrapper -->
+
+<div id="templatemo_banner_wrapper">
+	<div id="templatemo_flash_area">	
+	<table><tr><td valign="top" align="center"> 
+ <img src="images/head.gif" /></td><td valign="top"> <img src="images/head1.gif" /></td><td valign="top"> <img src="images/head2.gif" /></td></tr></table>
+        <div class="cleaner"></div>
+        <div id="menu" align="center">
+    <ul class="menu">
+        <li> <asp:Label ID="Label111" runat="server"></asp:Label></li>
+     </ul>
+</div>
+
+<div id="copyright">Copyright &copy; 2011 <a href="http://apycom.com/">Apycom jQuery Menus</a></div>
+
+	</div>
+</div> <!-- end of banner_wrapper -->
+
+<div id="templatemo_content_wrapper">
+	<div id="templatemo_content">
+    
+    		 <div>
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </div>
+    
+    		
+            <div class="cleaner"></div>
+    </div> <!-- end of content -->
+</div> <!-- end of content -->
+
+<div id="templatemo_footer_wrapper">
+	<div id="templatemo_footer">
+    
+        Copyright © 2011 <a href="#">Security Socket Layer For Virtual Payment Gateway</a> - 
+        <a href="#" target="_parent">All Rights Reserved</a>
+    
+    </div>
+</div>
+   
+    </form>
+</body>
+</html>
